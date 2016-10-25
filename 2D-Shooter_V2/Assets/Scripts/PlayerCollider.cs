@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerCollider : MonoBehaviour {
+public class PlayerCollider : MonoBehaviour
+{
+	
+	void OnTriggerEnter2D (Collider2D other)
+	{
+		
+		if (other.gameObject.tag == "Enemy_Tank") {
 
-	// Use this for initialization
-	void Start () {
-	
+			Debug.Log ("enemy");
+			Player.Instance.Health -= 10;
+			Player.Instance.points += 5;
+		}
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }

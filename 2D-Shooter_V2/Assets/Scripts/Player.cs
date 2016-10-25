@@ -1,15 +1,52 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour {
+public class Player
+{
+	private static Player instance = null;
 
-	// Use this for initialization
-	void Start () {
+	public static Player Instance {
+
+		get {
+			if (instance == null) {
+
+				instance = new Player ();
+			
+			}
+			return instance;
+		}
 	
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	public Hud_Controller hud = null;
+	private int PlayerPoints = 0;
+
+	public int points {
+		get { 
+		
+			return PlayerPoints;
+		}
+		set { 
+		
+			PlayerPoints = value;
+			hud.updatePoints ();
+		}
+
 	}
+	private int playerhealth= 100;
+	public int Health{
+
+		get{return playerhealth;}
+		set{ playerhealth = value;
+			hud.updateHealth();}
+
+
+	}
+
+
+
+
+
+
 }
