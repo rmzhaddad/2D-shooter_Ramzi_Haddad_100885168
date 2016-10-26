@@ -6,12 +6,12 @@ public class PlayerCollider : MonoBehaviour
 	
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		
+		// when the tank collide with tank
 		if (other.gameObject.tag == "Enemy_Tank") {
 
-			Debug.Log ("enemy");
-			Player.Instance.Health -= 10;
-			Player.Instance.points += 5;
+
+			Player.Instance.Health -= 10;// health -10
+
 		}
 
 	}

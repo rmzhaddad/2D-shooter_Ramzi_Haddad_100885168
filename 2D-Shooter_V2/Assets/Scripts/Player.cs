@@ -10,7 +10,7 @@ public class Player
 		get {
 			if (instance == null) {
 
-				instance = new Player ();
+				instance = new Player (); // to assign the player object 
 			
 			}
 			return instance;
@@ -19,7 +19,7 @@ public class Player
 
 	}
 
-	public Hud_Controller hud = null;
+	public Hud_Controller hud = null;//to assign the Hud 
 	private int PlayerPoints = 0;
 
 	public int points {
@@ -39,9 +39,15 @@ public class Player
 
 		get{return playerhealth;}
 		set{ playerhealth = value;
-			hud.updateHealth();}
+			hud.updateHealth();
+		}
 
 
+	}
+	private int numberOfEnemies = 1;// the number of enemies 
+	public int NumOfEnemy{
+		get{return numberOfEnemies; }
+		set{numberOfEnemies = value; }
 	}
 
 

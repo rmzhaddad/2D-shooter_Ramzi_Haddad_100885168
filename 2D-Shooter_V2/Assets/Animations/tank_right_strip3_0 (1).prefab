@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013013567890}
   - 212: {fileID: 212000013067118094}
+  - 114: {fileID: 114000013331474630}
   m_Layer: 0
   m_Name: tank_right_strip3_0 (1)
   m_TagString: Untagged
@@ -40,6 +41,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &114000013331474630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012432030580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05eb3593ddc59ce4881cad3b6c484b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000013067118094
 SpriteRenderer:
   m_ObjectHideFlags: 1

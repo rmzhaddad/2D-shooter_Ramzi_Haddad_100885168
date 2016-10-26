@@ -13,11 +13,19 @@ public class BackgroundController : MonoBehaviour
 	private float PlayerInput_Horizantal;
 	private float PlayerInput_Vertical;
 
+
+
+
 	// Use this for initialization
 	void Start ()
 	{
 		BackgroundTransform = gameObject.GetComponent<Transform> ();
 		BackgroundPosition = BackgroundTransform.position;
+		// this code is to start the background music
+		AudioSource BackgroundMusica = gameObject.GetComponent<AudioSource> ();
+
+			BackgroundMusica.Play ();
+	
 	}
 	
 	// Update is called once per tick
@@ -38,7 +46,7 @@ public class BackgroundController : MonoBehaviour
 		if (PlayerInput_Vertical < 0) {
 			BackgroundPosition -= new Vector2 (0, speed);
 		}
-
+		// this function is to keep the background in borders
 		checkbounds ();
 		BackgroundTransform.position = BackgroundPosition;
 
@@ -54,13 +62,13 @@ public class BackgroundController : MonoBehaviour
 			BackgroundPosition.x = 20f;
 
 		}
-		if (BackgroundPosition.y >8f) {
-			BackgroundPosition.y =8f;
+		if (BackgroundPosition.y >7f) {
+			BackgroundPosition.y =7f;
 
 		}
 
-		if (BackgroundPosition.y <-8f) {
-			BackgroundPosition.y =-8f;
+		if (BackgroundPosition.y <-7f) {
+			BackgroundPosition.y =-7f;
 
 		}
 
